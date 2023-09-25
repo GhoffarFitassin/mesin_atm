@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Kelompok12_MesinATM {
     public static void main(String[] args) throws Exception {
-        double saldo, tarik;
+        double saldo = 100000, tarik, tambah;
         int pilihan;
         Scanner input = new Scanner(System.in);
 
@@ -21,6 +21,14 @@ public class Kelompok12_MesinATM {
             case 1:
             break;
             case 2:
+            System.out.println("======================================");
+            System.out.println("    Nominal Yang Ingin Anda Tambah");
+            System.out.println("======================================");
+            System.out.print("  Isi Nominal: ");
+            tambah = input.nextDouble();
+            saldo += tambah;
+            System.out.println("Jumlah Uang Yang Ditambah: " + tambah);
+            System.out.println("      Saldo Saat Ini: " + saldo);
             break;
             case 3:
             System.out.println("isi uang yang ingin ditarik");
@@ -37,6 +45,6 @@ public class Kelompok12_MesinATM {
             default:
             System.exit(0);
         }
-
+        input.close();
     }
 }
