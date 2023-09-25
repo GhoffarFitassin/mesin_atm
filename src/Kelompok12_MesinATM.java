@@ -42,6 +42,9 @@ public class Kelompok12_MesinATM {
             break;
             case 5:
             break;
+            case 6:
+            System.exit(0);
+            break;
             default:
             System.exit(0);
         }
