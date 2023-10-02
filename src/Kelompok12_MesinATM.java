@@ -5,6 +5,21 @@ public class Kelompok12_MesinATM {
         double saldo = 100000, tarik, tambah;
         int pilihan;
         Scanner input = new Scanner(System.in);
+        String user, pw;
+        String username = "admin";
+        String password = "123";
+
+        System.out.print("Masukkkan username: ");
+        user = input.nextLine();
+        System.out.print("Masukkkan password: ");
+        pw = input.nextLine();
+
+        if ((user.equals(username)) && (pw.equals(password))) {
+            System.out.println("berhasil");
+        } else {
+            System.out.println("gagal");
+        }
+
 
         System.out.println("");
         System.out.println("********** Bank Suka Maju **********");
