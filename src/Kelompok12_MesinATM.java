@@ -19,16 +19,22 @@ public class Kelompok12_MesinATM {
         pilihan = input.nextInt();
         switch (pilihan) {
             case 1:
+            System.out.println("=======================================");
+            System.out.println("              Cek Saldo");
+            System.out.println("=======================================");
+            System.out.println("\n     Saldo Anda Saat Ini : " + saldo);
+            System.out.println("\n=======================================");
             break;
             case 2:
             System.out.println("======================================");
-            System.out.println("    Nominal Yang Ingin Anda Tambah");
+            System.out.println("              Setor Tunai");
             System.out.println("======================================");
-            System.out.print("  Isi Nominal: ");
+            System.out.print("\nNominal Yang Ingin Anda Setor: ");
             tambah = input.nextDouble();
             saldo += tambah;
-            System.out.println("Jumlah Uang Yang Ditambah: " + tambah);
-            System.out.println("      Saldo Saat Ini: " + saldo);
+            System.out.println("Jumlah Uang Yang Di Setor    : " + tambah);
+            System.out.println("Saldo Saat Ini               : " + saldo);
+            System.out.println("\n======================================");
             break;
             case 3:
             System.out.println("isi uang yang ingin ditarik");
