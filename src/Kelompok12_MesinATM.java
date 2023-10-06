@@ -26,6 +26,7 @@ public class Kelompok12_MesinATM {
         user = input.nextLine();
         System.out.print("Masukkkan password: ");
         pw = input.nextLine();
+        System.out.println("===================");
 
         if ((user.equals(username))) {
             if ((pw.equals(password))) {
