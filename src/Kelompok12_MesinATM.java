@@ -3,16 +3,30 @@ import java.util.Scanner;
 public class Kelompok12_MesinATM {
     public static void main(String[] args) throws Exception {
         double saldo = 100000, tarik, tambah;
-        int pilihan, pilihan2;
+        int pilihan;
         Scanner input = new Scanner(System.in);
         String user, pw;
         String username = "admin";
         String password = "123";
 
+        System.out.println("========================================================================================");
+        System.out.println("\t\r\n" + //
+        "\t███╗   ███╗███████╗███████╗██╗███╗   ██╗     █████╗ ████████╗███╗   ███╗\r\n" + //
+        "\t████╗ ████║██╔════╝██╔════╝██║████╗  ██║    ██╔══██╗╚══██╔══╝████╗ ████║\r\n" + //
+        "\t██╔████╔██║█████╗  ███████╗██║██╔██╗ ██║    ███████║   ██║   ██╔████╔██║\r\n" + //
+        "\t██║╚██╔╝██║██╔══╝  ╚════██║██║██║╚██╗██║    ██╔══██║   ██║   ██║╚██╔╝██║\r\n" + //
+        "\t██║ ╚═╝ ██║███████╗███████║██║██║ ╚████║    ██║  ██║   ██║   ██║ ╚═╝ ██║\r\n" + //
+        "\t╚═╝     ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝    ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝\r\n" + //
+        "\t                                                                        \r\n" + //
+        "");
+        System.out.println("========================================================================================");
+        
+        System.out.println("========== Login ==========");
         System.out.print("Masukkkan username: ");
         user = input.nextLine();
         System.out.print("Masukkkan password: ");
         pw = input.nextLine();
+        System.out.println("===========================");
 
         if ((user.equals(username))) {
             if ((pw.equals(password))) {
@@ -76,7 +90,7 @@ public class Kelompok12_MesinATM {
                 // System.out.println("7. Saat penarikan, saldo minimal anda adalah Rp.500000");
                 // System.out.println("8. Jika terdapat masalah pada mesin ATM hubungi 021-5437xxx");
                 System.out.println("=================================================");
-            break;
+                break;
             case 6:
             System.exit(0);
             break;
