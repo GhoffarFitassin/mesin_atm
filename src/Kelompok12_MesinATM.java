@@ -14,10 +14,14 @@ public class Kelompok12_MesinATM {
         System.out.print("Masukkkan password: ");
         pw = input.nextLine();
 
-        if ((user.equals(username)) && (pw.equals(password))) {
-            System.out.println("berhasil");
+        if ((user.equals(username))) {
+            if ((pw.equals(password))) {
+                System.out.println("Login Berhasil");
+            } else {
+                System.out.println("Password salah");
+            }
         } else {
-            System.out.println("gagal");
+            System.out.println("Username salah");
         }
 
 
