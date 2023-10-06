@@ -80,7 +80,17 @@ public class Kelompok12_MesinATM {
             case 4:
             break;
             case 5:
-            break;
+                System.out.println("=================================================");
+                System.out.println("                      Help                       ");
+                System.out.println("1. Gunakan Menu ke-1 jika anda ingin melihat saldo anda");
+                System.out.println("2. Gunakan Menu ke-2 jika anda ingin mengisi saldo");
+                System.out.println("3. Gunakan Menu ke-3 jika anda ingin melakukan penarikan saldo");
+                System.out.println("4. Gunakan Menu ke-4 jika anda ingin melihat history transaksi");
+                System.out.println("6. Gunakan Menu ke-6 jika anda selesai menggunakan mesin ATM");
+                // System.out.println("7. Saat penarikan, saldo minimal anda adalah Rp.500000");
+                // System.out.println("8. Jika terdapat masalah pada mesin ATM hubungi 021-5437xxx");
+                System.out.println("=================================================");
+                break;
             case 6:
             System.exit(0);
             break;
