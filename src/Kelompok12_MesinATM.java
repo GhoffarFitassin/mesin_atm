@@ -48,13 +48,26 @@ public class Kelompok12_MesinATM {
                 pilihan = input.nextInt();
                 switch (pilihan) {
                     case 1:
+                        do {
                         System.out.println("=======================================");
                         System.out.println("              Cek Saldo");
                         System.out.println("=======================================");
                         System.out.println("\n     Saldo Anda Saat Ini : " + saldo);
-                        System.out.println("\n=======================================");
+                        System.out.println("=======================================");
+                        System.out.println("\n1.keluar");
+                        System.out.println("2.Kembali");
+                        System.out.print("\nPilih Menu : ");
+                            pilihan2 = input.nextInt();
+                            switch (pilihan2) {
+                                    case 1:
+                                            System.exit(0);
+                                            break;
+    
+                                        }
+                                    } while (pilihan2 != 2);  
                         break;
                     case 2:
+                        do {
                         System.out.println("======================================");
                         System.out.println("              Setor Tunai");
                         System.out.println("======================================");
@@ -63,7 +76,18 @@ public class Kelompok12_MesinATM {
                         saldo += tambah;
                         System.out.println("Jumlah Uang Yang Di Setor    : " + tambah);
                         System.out.println("Saldo Saat Ini               : " + saldo);
-                        System.out.println("\n======================================");
+                        System.out.println("======================================");
+                        System.out.println("\n1.keluar");
+                        System.out.println("2.Kembali");
+                        System.out.print("\nPilih Menu : ");
+                            pilihan2 = input.nextInt();
+                            switch (pilihan2) {
+                                    case 1:
+                                            System.exit(0);
+                                            break;
+    
+                                        }
+                                    } while (pilihan2 != 2);  
                         break;
                     case 3:
                         System.out.println("isi uang yang ingin ditarik");
