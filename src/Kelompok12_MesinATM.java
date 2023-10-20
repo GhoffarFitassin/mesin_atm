@@ -90,7 +90,7 @@ public class Kelompok12_MesinATM {
                         case 3:
                             do {
                                 System.out.println("======================================");
-                                System.out.println("              Setor Tunai");
+                                System.out.println("              tarik uang Tunai");
                                 System.out.println("======================================");
                                 System.out.println("isi uang yang ingin ditarik");
                                 System.out.print("Isi nominal : ");
