@@ -4,8 +4,9 @@ public class Kelompok12_MesinATM {
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in);
-        double saldo = 100000, tarik, tambah;
-        int pw, pilihan, pilihan2;
+        double saldo = 100000, tarik = 0, tambah = 0;
+        int pw, pilihan, pilihan2, masuk = 0, keluar = 0;
+        double[] tambah_saldo = new double[10], tarik_saldo = new double[10];
         String user;
         String username = "admin";
         int password = 123;
@@ -72,6 +73,8 @@ public class Kelompok12_MesinATM {
                                 System.out.println("======================================");
                                 System.out.print("\nNominal Yang Ingin Anda Setor: ");
                                 tambah = input.nextDouble();
+                                tambah_saldo[masuk] = tambah;
+                                masuk++;
                                 saldo += tambah;
                                 System.out.println("Jumlah Uang Yang Di Setor    : " + tambah);
                                 System.out.println("Saldo Saat Ini               : " + saldo);
@@ -95,6 +98,8 @@ public class Kelompok12_MesinATM {
                                 System.out.println("isi uang yang ingin ditarik");
                                 System.out.print("Isi nominal : ");
                                 tarik = input.nextDouble();
+                                tarik_saldo[keluar] = tarik;
+                                keluar++;
                                 saldo -= tarik;
                                 System.out.println("sisa saldo : " + saldo);
                                 System.out.println("jumlah uang yang ditarik : " + tarik);
@@ -113,6 +118,29 @@ public class Kelompok12_MesinATM {
 
                             break;
                         case 4:
+                            do {
+                                System.out.println("======================================");
+                                System.out.println("\t\tHistori transaksi");
+                                System.out.println("======================================");
+                                System.out.println("Saldo Masuk");
+                                for (int in = 0; in < masuk; in++) {
+                                    System.out.println((in + 1) + " " + tambah_saldo[in]);
+                                }
+                                System.out.println("Saldo Keluar");
+                                for (int out = 0; out < masuk; out++) {
+                                    System.out.println((out + 1) + " " + tarik_saldo[out]);
+                                }
+                                System.out.println("======================================");
+                                System.out.println("\n1.keluar");
+                                System.out.println("2.Kembali");
+                                System.out.print("\nPilih Menu : ");
+                                pilihan2 = input.nextInt();
+                                switch (pilihan2) {
+                                    case 1:
+                                        System.exit(0);
+                                        break;
+                                }
+                            } while (pilihan2 != 2);
                             break;
                         case 5:
                             do {
