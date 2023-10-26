@@ -32,10 +32,10 @@ public class Kelompok12_MesinATM {
 
         if ((user.equals(username))) {
             if (pw == password) {
+                System.out.println("Login Berhasil");
+                System.out.println("");
                 while (true) {
 
-                    System.out.println("Login Berhasil");
-                    System.out.println("");
                     System.out.println("********** Bank Suka Maju **********");
                     System.out.println("-----------------------------------");
                     System.out.println("\n1.Cek Saldo");
