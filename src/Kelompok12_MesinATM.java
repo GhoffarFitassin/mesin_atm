@@ -4,9 +4,9 @@ public class Kelompok12_MesinATM {
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in);
-        double saldo = 100000, tarik = 0, tambah = 0;
+        int saldo = 100000, tarik = 0, tambah = 0;
         int pw, pilihan, pilihan2, masuk = 0, keluar = 0;
-        double[] tambah_saldo = new double[10], tarik_saldo = new double[10];
+        int[] tambah_saldo = new int[10], tarik_saldo = new int[10];
         String user;
         String username = "admin";
         int password = 123;
@@ -74,7 +74,7 @@ public class Kelompok12_MesinATM {
                                     System.out.println("              Setor Tunai");
                                     System.out.println("======================================");
                                     System.out.print("\nNominal Yang Ingin Anda Setor: ");
-                                    tambah = input.nextDouble();
+                                    tambah = input.nextInt();
                                     tambah_saldo[masuk] = tambah;
                                     masuk++;
                                     saldo += tambah;
@@ -99,7 +99,7 @@ public class Kelompok12_MesinATM {
                                     System.out.println("======================================");
                                     System.out.println("isi uang yang ingin ditarik");
                                     System.out.print("Isi nominal : ");
-                                    tarik = input.nextDouble();
+                                    tarik = input.nextInt();
                                     tarik_saldo[keluar] = tarik;
                                     keluar++;
                                     saldo -= tarik;
