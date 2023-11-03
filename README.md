@@ -1,18 +1,30 @@
-## Getting Started
+## Project Daspro Kelompok 1 - MESIN ATM
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Halo👋
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+### Deskripsi:
+Aplikasi ini memungkinkan pengguna untuk melakukan berbagai operasi perbankan. Program mesin ATM dalam bahasa pemrograman Java adalah aplikasi sederhana yang mensimulasikan operasi dasar mesin ATM, seperti pengecekan saldo, penarikan uang, setoran uang, dan Histori Transaksi. Pengguna dapat memasukkan nomor rekening dan PIN mereka untuk mengakses akun mereka.
+---
+### Fitur
+- Login
+- Menampilkan Saldo
+- Menambah Saldo
+- Menarik Saldo
+- Histori Transaksi
+- Help
+---
+> __Contributor__ 
+> `NIM` BIODATA
+- `2341720256` 05. [ggyupi-Beryl Funky Mubarok](https://github.com/ggyupi)
+- `2341720035` 12. [GhoffarFitassin-Ghoffar Abdul Ja'far](https://github.com/GhoffarFitassin)
+- `2341720160` 15. [mlnrengga-Maulana Rengga Ramadan](https://github.com/mlnrengga)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+<br/>
+<br/>
+<br/>
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+<p align="center">
+<img src="https://contrib.rocks/image?repo=GhoffarFitassin/mesin_atm" />
+</p>
