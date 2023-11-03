@@ -5,8 +5,11 @@
 ---
 
 ### Deskripsi:
+
 Aplikasi ini memungkinkan pengguna untuk melakukan berbagai operasi perbankan. Program mesin ATM dalam bahasa pemrograman Java adalah aplikasi sederhana yang mensimulasikan operasi dasar mesin ATM, seperti pengecekan saldo, penarikan uang, setoran uang, dan Histori Transaksi. Pengguna dapat memasukkan nomor rekening dan PIN mereka untuk mengakses akun mereka.
+
 ---
+
 ### Fitur
 - Login
 - Menampilkan Saldo
@@ -14,7 +17,9 @@ Aplikasi ini memungkinkan pengguna untuk melakukan berbagai operasi perbankan. P
 - Menarik Saldo
 - Histori Transaksi
 - Help
+
 ---
+
 > __Contributor__ 
 > `NIM` BIODATA
 - `2341720256` 05. [ggyupi-Beryl Funky Mubarok](https://github.com/ggyupi)
