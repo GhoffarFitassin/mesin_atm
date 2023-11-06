@@ -96,54 +96,54 @@ public class Kelompok12_MesinATM {
                             } while (pilihan2 != 2);
                             break;
                         case 2:
-                            // do {
-                            // System.out.println("======================================");
-                            // System.out.println(" Setor Tunai");
-                            // System.out.println("======================================");
-                            // System.out.print("\nNominal Yang Ingin Anda Setor: ");
-                            // tambah = input.nextInt();
-                            // tambah_saldo[masuk] = tambah;
-                            // masuk++;
-                            // saldo += tambah;
-                            // System.out.println("Jumlah Uang Yang Di Setor : " + tambah);
-                            // System.out.println("Saldo Saat Ini : " + saldo);
-                            // System.out.println("======================================");
-                            // System.out.println("\n1.keluar");
-                            // System.out.println("2.Kembali");
-                            // System.out.print("\nPilih Menu : ");
-                            // pilihan2 = input.nextInt();
-                            // switch (pilihan2) {
-                            // case 1:
-                            // toLogin=false;
-                            // break;
-                            // }
-                            // } while (pilihan2 != 2);
+                            do {
+                            System.out.println("======================================");
+                            System.out.println(" Setor Tunai");
+                            System.out.println("======================================");
+                            System.out.print("\nNominal Yang Ingin Anda Setor: ");
+                            tambah = input.nextInt();
+                            tambah_saldo[masuk] = tambah;
+                            masuk++;
+                            account[saldo][1] += tambah;
+                            System.out.println("Jumlah Uang Yang Di Setor : " + tambah);
+                            System.out.println("Saldo Saat Ini : " + account[saldo][1]);
+                            System.out.println("======================================");
+                            System.out.println("\n1.keluar");
+                            System.out.println("2.Kembali");
+                            System.out.print("\nPilih Menu : ");
+                            pilihan2 = input.nextInt();
+                            switch (pilihan2) {
+                            case 1:
+                            toLogin=false;
+                            break;
+                            }
+                            } while (pilihan2 != 2);
                             break;
                         case 3:
-                            // do {
-                            // System.out.println("======================================");
-                            // System.out.println(" tarik uang Tunai");
-                            // System.out.println("======================================");
-                            // System.out.println("isi uang yang ingin ditarik");
-                            // System.out.print("Isi nominal : ");
-                            // tarik = input.nextInt();
-                            // tarik_saldo[keluar] = tarik;
-                            // keluar++;
-                            // saldo -= tarik;
-                            // System.out.println("sisa saldo : " + saldo);
-                            // System.out.println("jumlah uang yang ditarik : " + tarik);
-                            // System.out.println("======================================");
-                            // System.out.println("\n1.keluar");
-                            // System.out.println("2.Kembali");
-                            // System.out.print("\nPilih Menu : ");
-                            // pilihan2 = input.nextInt();
-                            // switch (pilihan2) {
-                            // case 1:
-                            // toLogin=false;
-                            // break;
-                            // }
-                            // break;
-                            // } while (pilihan2 != 2);
+                            do {
+                            System.out.println("======================================");
+                            System.out.println(" tarik uang Tunai");
+                            System.out.println("======================================");
+                            System.out.println("isi uang yang ingin ditarik");
+                            System.out.print("Isi nominal : ");
+                            tarik = input.nextInt();
+                            tarik_saldo[keluar] = tarik;
+                            keluar++;
+                            account[saldo][1] -= tarik;
+                            System.out.println("sisa saldo : " + account[saldo][1]);
+                            System.out.println("jumlah uang yang ditarik : " + tarik);
+                            System.out.println("======================================");
+                            System.out.println("\n1.keluar");
+                            System.out.println("2.Kembali");
+                            System.out.print("\nPilih Menu : ");
+                            pilihan2 = input.nextInt();
+                            switch (pilihan2) {
+                            case 1:
+                            toLogin=false;
+                            break;
+                            }
+                            break;
+                            } while (pilihan2 != 2);
 
                             break;
                         case 4:
