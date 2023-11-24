@@ -8,6 +8,7 @@ public class Kelompok12_MesinATM {
     static boolean toLogin = false;
 
     public static void main(String[] args) throws Exception {
+
         Scanner input = new Scanner(System.in);
         Login();
         input.close();
@@ -213,11 +214,6 @@ public class Kelompok12_MesinATM {
                             // System.out.println("8. Jika terdapat masalah pada mesin ATM hubungi
                             // 021-5437xxx");
                             System.out.println("=================================================");
-                            System.out.println("\n1.keluar");
-                            System.out.println("2.Kembali");
-                            System.out.print("\nPilih Menu : ");
-                            pilihan2 = input.nextInt();
-                            switch (pilihan2) {
                                 case 1:
                                     toLogin = false;
                                     break loop;
@@ -232,5 +228,6 @@ public class Kelompok12_MesinATM {
             } while (!toLogin == false);
             Login();
         }
+                           
     }
 }
