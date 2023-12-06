@@ -112,10 +112,10 @@ public class Kelompok12_MesinATM {
                             System.out.print("\nPilih Menu : ");
                             pilihan2 = input.nextInt();
                             switch (pilihan2) {
-                                case 1:
+                                case 1 -> {
                                     toLogin = false;
                                     break loop;
-
+                                }
                             }
                         } while (pilihan2 != 2);
                     }
@@ -138,9 +138,10 @@ public class Kelompok12_MesinATM {
                             System.out.print("\nPilih Menu : ");
                             pilihan2 = input.nextInt();
                             switch (pilihan2) {
-                                case 1:
+                                case 1 -> {
                                     toLogin = false;
                                     break loop;
+                                }
                             }
                         } while (pilihan2 != 2);
                     }
@@ -164,9 +165,10 @@ public class Kelompok12_MesinATM {
                             System.out.print("\nPilih Menu : ");
                             pilihan2 = input.nextInt();
                             switch (pilihan2) {
-                                case 1:
+                                case 1 -> {
                                     toLogin = false;
                                     break;
+                                }
                             }
                             break;
                         } while (pilihan2 != 2);
@@ -192,9 +194,10 @@ public class Kelompok12_MesinATM {
                             System.out.print("\nPilih Menu : ");
                             pilihan2 = input.nextInt();
                             switch (pilihan2) {
-                                case 1:
+                                case 1 -> {
                                     toLogin = false;
                                     break loop;
+                                }
                             }
                         } while (pilihan2 != 2);
                     }
@@ -214,9 +217,11 @@ public class Kelompok12_MesinATM {
                             // System.out.println("8. Jika terdapat masalah pada mesin ATM hubungi
                             // 021-5437xxx");
                             System.out.println("=================================================");
-                                case 1:
+                                switch (pilihan2) {
+                                case 1 -> {
                                     toLogin = false;
                                     break loop;
+                                }
                             }
                         } while (pilihan2 != 2);
                     }
