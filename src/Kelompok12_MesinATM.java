@@ -6,17 +6,29 @@ public class Kelompok12_MesinATM {
     static boolean backLogin = true;
     static boolean isMenu = true;
     static boolean toLogin = false;
+    static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
 
-        Scanner input = new Scanner(System.in);
+        System.out.println(
+                "========================================================================================");
+        System.out.println("\t\r\n" + //
+                "\t███╗   ███╗███████╗███████╗██╗███╗   ██╗     █████╗ ████████╗███╗   ███╗\r\n" + //
+                "\t████╗ ████║██╔════╝██╔════╝██║████╗  ██║    ██╔══██╗╚══██╔══╝████╗ ████║\r\n" + //
+                "\t██╔████╔██║█████╗  ███████╗██║██╔██╗ ██║    ███████║   ██║   ██╔████╔██║\r\n" + //
+                "\t██║╚██╔╝██║██╔══╝  ╚════██║██║██║╚██╗██║    ██╔══██║   ██║   ██║╚██╔╝██║\r\n" + //
+                "\t██║ ╚═╝ ██║███████╗███████║██║██║ ╚████║    ██║  ██║   ██║   ██║ ╚═╝ ██║\r\n" + //
+                "\t╚═╝     ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝    ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝\r\n" + //
+                "\t                                                                        \r\n" + //
+                "");
+        System.out.println(
+                "========================================================================================");
         Login();
         input.close();
     }
 
     // function login
     public static void Login() {
-        Scanner input = new Scanner(System.in);
 
         int counter = 0;
         int[][] account = new int[baris][2];
@@ -40,24 +52,10 @@ public class Kelompok12_MesinATM {
             keluar = 0;
             counter = 0;
             toLogin = false;
-            System.out.println(
-                    "========================================================================================");
-            System.out.println("\t\r\n" + //
-                    "\t███╗   ███╗███████╗███████╗██╗███╗   ██╗     █████╗ ████████╗███╗   ███╗\r\n" + //
-                    "\t████╗ ████║██╔════╝██╔════╝██║████╗  ██║    ██╔══██╗╚══██╔══╝████╗ ████║\r\n" + //
-                    "\t██╔████╔██║█████╗  ███████╗██║██╔██╗ ██║    ███████║   ██║   ██╔████╔██║\r\n" + //
-                    "\t██║╚██╔╝██║██╔══╝  ╚════██║██║██║╚██╗██║    ██╔══██║   ██║   ██║╚██╔╝██║\r\n" + //
-                    "\t██║ ╚═╝ ██║███████╗███████║██║██║ ╚████║    ██║  ██║   ██║   ██║ ╚═╝ ██║\r\n" + //
-                    "\t╚═╝     ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝    ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝\r\n" + //
-                    "\t                                                                        \r\n" + //
-                    "");
-            System.out.println(
-                    "========================================================================================");
 
             // input login
             System.out.println("========== Login ==========");
-            System.out.print("Masukkkan PIN: ");
-            pin = input.nextInt();
+            pin = getStringNumber("Masukkan PIN : ");
             System.out.println("===========================");
 
             // pengecekan akun
@@ -81,36 +79,43 @@ public class Kelompok12_MesinATM {
 
     // function menu
     public static void Menu(int[][] account) {
-        Scanner input = new Scanner(System.in);
         int[] tambah_saldo = new int[10], tarik_saldo = new int[10];
         // menu area
         while (toLogin == true) {
             System.out.println("");
             loop: do {
-                System.out.println("------------------------------------");
-                System.out.println("********** Bank Suka Maju **********");
-                System.out.println("------------------------------------");
-                System.out.println("\n1.Cek Saldo");
-                System.out.println("2.Simpan Uang");
-                System.out.println("3.Ambil Uang");
-                System.out.println("4.History Transaksi");
-                System.out.println("5.Help");
-                System.out.println("6.keluar");
-                System.out.print("\nPilih Menu : ");
-                pilihan = input.nextInt();
+                System.out.println("************************************");
+                System.out.println("|          Bank Suka Maju          |");
+                System.out.println("************************************");
+                // System.out.println("\n1.Cek Saldo");
+                // System.out.println("2.Simpan Uang");
+                // System.out.println("3.Ambil Uang");
+                // System.out.println("4.History Transaksi");
+                // System.out.println("5.Help");
+                // System.out.println("6.keluar");
+                pilihan = getPickMenu(new String[] {
+                        "Cek Saldo",
+                        "Simpan Uang",
+                        "Ambil Uang",
+                        "History Transaksi",
+                        "Help",
+                        "keluar"
+                });
                 switch (pilihan) {
                     // case 1 cek saldo
                     case 1 -> {
                         do {
                             System.out.println("=======================================");
-                            System.out.println("              Cek Saldo");
+                            System.out.println("|               Cek Saldo             |");
                             System.out.println("=======================================");
                             System.out.println("\n     Saldo Anda Saat Ini : " + account[saldo][1]);
                             System.out.println("=======================================");
-                            System.out.println("\n1.keluar");
-                            System.out.println("2.Kembali");
-                            System.out.print("\nPilih Menu : ");
-                            pilihan2 = input.nextInt();
+                            // System.out.println("\n1.keluar");
+                            // System.out.println("2.Kembali");
+                            pilihan2 = getPickMenu(new String[] {
+                                    "Keluar",
+                                    "Kembali"
+                            });
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
@@ -123,7 +128,7 @@ public class Kelompok12_MesinATM {
                     case 2 -> {
                         do {
                             System.out.println("======================================");
-                            System.out.println(" Setor Tunai");
+                            System.out.println("|             Setor Tunai            |");
                             System.out.println("======================================");
                             System.out.print("\nNominal Yang Ingin Anda Setor: ");
                             tambah = input.nextInt();
@@ -133,10 +138,12 @@ public class Kelompok12_MesinATM {
                             System.out.println("Jumlah Uang Yang Di Setor : " + tambah);
                             System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                             System.out.println("======================================");
-                            System.out.println("\n1.keluar");
-                            System.out.println("2.Kembali");
-                            System.out.print("\nPilih Menu : ");
-                            pilihan2 = input.nextInt();
+                            // System.out.println("\n1.keluar");
+                            // System.out.println("2.Kembali");
+                            pilihan2 = getPickMenu(new String[] {
+                                    "Keluar",
+                                    "Kembali"
+                            });
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
@@ -149,7 +156,7 @@ public class Kelompok12_MesinATM {
                     case 3 -> {
                         do {
                             System.out.println("======================================");
-                            System.out.println(" tarik uang Tunai");
+                            System.out.println("|          tarik uang Tunai          |");
                             System.out.println("======================================");
                             System.out.println("isi uang yang ingin ditarik");
                             System.out.print("Isi nominal : ");
@@ -160,10 +167,12 @@ public class Kelompok12_MesinATM {
                             System.out.println("sisa saldo : " + account[saldo][1]);
                             System.out.println("jumlah uang yang ditarik : " + tarik);
                             System.out.println("======================================");
-                            System.out.println("\n1.keluar");
-                            System.out.println("2.Kembali");
-                            System.out.print("\nPilih Menu : ");
-                            pilihan2 = input.nextInt();
+                            // System.out.println("\n1.keluar");
+                            // System.out.println("2.Kembali");
+                            pilihan2 = getPickMenu(new String[] {
+                                    "Keluar",
+                                    "Kembali"
+                            });
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
@@ -178,7 +187,7 @@ public class Kelompok12_MesinATM {
                     case 4 -> {
                         do {
                             System.out.println("======================================");
-                            System.out.println("\t\tHistori transaksi");
+                            System.out.println("|          Histori transaksi         |");
                             System.out.println("======================================");
                             System.out.println("Saldo Masuk");
                             for (int in = 0; in < masuk; in++) {
@@ -189,10 +198,12 @@ public class Kelompok12_MesinATM {
                                 System.out.println((out + 1) + " " + tarik_saldo[out]);
                             }
                             System.out.println("======================================");
-                            System.out.println("\n1.keluar");
-                            System.out.println("2.Kembali");
-                            System.out.print("\nPilih Menu : ");
-                            pilihan2 = input.nextInt();
+                            // System.out.println("\n1.keluar");
+                            // System.out.println("2.Kembali");
+                            pilihan2 = getPickMenu(new String[] {
+                                    "Keluar",
+                                    "Kembali"
+                            });
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
@@ -205,7 +216,8 @@ public class Kelompok12_MesinATM {
                     case 5 -> {
                         do {
                             System.out.println("=================================================");
-                            System.out.println("                      Help                       ");
+                            System.out.println("|                     Help                      |");
+                            System.out.println("=================================================");
                             System.out.println("1. Gunakan Menu ke-1 jika anda ingin melihat saldo anda");
                             System.out.println("2. Gunakan Menu ke-2 jika anda ingin mengisi saldo");
                             System.out
@@ -216,8 +228,11 @@ public class Kelompok12_MesinATM {
                             // System.out.println("7. Saat penarikan, saldo minimal anda adalah Rp.500000");
                             // System.out.println("8. Jika terdapat masalah pada mesin ATM hubungi
                             // 021-5437xxx");
-                            System.out.println("=================================================");
-                                switch (pilihan2) {
+                            pilihan2 = getPickMenu(new String[] {
+                                    "Keluar",
+                                    "Kembali"
+                            });
+                            switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
                                     break loop;
@@ -233,6 +248,41 @@ public class Kelompok12_MesinATM {
             } while (!toLogin == false);
             Login();
         }
-                           
     }
+
+    static int getStringNumber(String promt) {
+        String pilih;
+        int pil;
+        while (true) {
+            try {
+                System.out.print(promt);
+                pilih = input.nextLine().trim();
+                if (pilih.isEmpty()) {
+                    System.out.println("Input Tidak Boleh Kosong");
+                    continue;
+                }
+                pil = Integer.parseInt(pilih);
+                return pil;
+            } catch (Exception e) {
+                System.out.println("Harus Angka!!");
+                continue;
+            }
+        }
+    }
+
+    static int getPickMenu(String[] menu) {
+        int pil;
+        for (int i = 0; i < menu.length; i++) {
+            System.out.println((i + 1) + ". " + menu[i]);
+        }
+        while (true) {
+            pil = getStringNumber("PIlih Menu : ");
+            if (!(1 > pil || menu.length < pil)) {
+                return pil;
+            }
+            System.out.println("Menu tidak tersedia");
+        }
+    }
+
+    
 }
