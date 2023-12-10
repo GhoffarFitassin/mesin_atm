@@ -9,6 +9,7 @@ public class Kelompok12_MesinATM {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
+        clearScreen();
 
         System.out.println(
                 "========================================================================================");
@@ -29,6 +30,7 @@ public class Kelompok12_MesinATM {
 
     // function login
     public static void Login() {
+        clearScreen();
 
         int counter = 0;
         int[][] account = new int[baris][2];
@@ -79,6 +81,7 @@ public class Kelompok12_MesinATM {
 
     // function menu
     public static void Menu(int[][] account) {
+        clearScreen();
         int[] tambah_saldo = new int[10], tarik_saldo = new int[10];
         // menu area
         while (toLogin == true) {
@@ -284,5 +287,7 @@ public class Kelompok12_MesinATM {
         }
     }
 
-    
+    static void clearScreen(){
+        System.out.print("\033[H\033[2J");
+    }
 }
