@@ -9,7 +9,7 @@ public class Kelompok12_MesinATM {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        
+
         System.out.println(
                 "========================================================================================");
         System.out.println("\t\r\n" + //
@@ -87,12 +87,6 @@ public class Kelompok12_MesinATM {
                 System.out.println("************************************");
                 System.out.println("|          Bank Suka Maju          |");
                 System.out.println("************************************");
-                // System.out.println("\n1.Cek Saldo");
-                // System.out.println("2.Simpan Uang");
-                // System.out.println("3.Ambil Uang");
-                // System.out.println("4.History Transaksi");
-                // System.out.println("5.Help");
-                // System.out.println("6.keluar");
                 pilihan = getPickMenu(new String[] {
                         "Cek Saldo",
                         "Simpan Uang",
@@ -110,8 +104,6 @@ public class Kelompok12_MesinATM {
                             System.out.println("=======================================");
                             System.out.println("\n     Saldo Anda Saat Ini : " + account[saldo][1]);
                             System.out.println("=======================================");
-                            // System.out.println("\n1.keluar");
-                            // System.out.println("2.Kembali");
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -138,8 +130,6 @@ public class Kelompok12_MesinATM {
                             System.out.println("Jumlah Uang Yang Di Setor : " + tambah);
                             System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                             System.out.println("======================================");
-                            // System.out.println("\n1.keluar");
-                            // System.out.println("2.Kembali");
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -167,8 +157,6 @@ public class Kelompok12_MesinATM {
                             System.out.println("sisa saldo : " + account[saldo][1]);
                             System.out.println("jumlah uang yang ditarik : " + tarik);
                             System.out.println("======================================");
-                            // System.out.println("\n1.keluar");
-                            // System.out.println("2.Kembali");
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -198,8 +186,6 @@ public class Kelompok12_MesinATM {
                                 System.out.println((out + 1) + " " + tarik_saldo[out]);
                             }
                             System.out.println("======================================");
-                            // System.out.println("\n1.keluar");
-                            // System.out.println("2.Kembali");
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -225,9 +211,6 @@ public class Kelompok12_MesinATM {
                             System.out
                                     .println("4. Gunakan Menu ke-4 jika anda ingin melihat history transaksi");
                             System.out.println("6. Gunakan Menu ke-6 jika anda selesai menggunakan mesin ATM");
-                            // System.out.println("7. Saat penarikan, saldo minimal anda adalah Rp.500000");
-                            // System.out.println("8. Jika terdapat masalah pada mesin ATM hubungi
-                            // 021-5437xxx");
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
