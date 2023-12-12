@@ -50,7 +50,6 @@ public class Kelompok12_MesinATM {
             saldo = -1;
             masuk = 0;
             keluar = 0;
-            counter = 0;
             toLogin = false;
 
             // input login
