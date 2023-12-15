@@ -36,12 +36,15 @@ public class Kelompok12_MesinATM {
         // akun
         account[0][0] = 123;
         account[0][1] = 100000;
+        account[0][2] = 123456;
 
         account[1][0] = 321;
         account[1][1] = 500000;
+        account[1][2] = 234567;
 
         account[2][0] = 231;
         account[2][1] = 200000;
+        account[2][2] = 345678;
 
         do {
             if (counter == 5) {
