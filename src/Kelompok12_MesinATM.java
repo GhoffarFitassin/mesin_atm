@@ -184,7 +184,7 @@ public class Kelompok12_MesinATM {
                                 System.out.println((in + 1) + " " + tambah_saldo[in]);
                             }
                             System.out.println("Saldo Keluar");
-                            for (int out = 0; out < keluar; out++) {
+                            for (int out = 0; out < masuk; out++) {
                                 System.out.println((out + 1) + " " + tarik_saldo[out]);
                             }
                             System.out.println("======================================");
