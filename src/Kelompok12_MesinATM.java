@@ -78,7 +78,7 @@ public class Kelompok12_MesinATM {
 
     // function menu
     public static void Menu(int[][] account) {
-        
+
         int[] tambah_saldo = new int[10], tarik_saldo = new int[10];
         // menu area
         while (toLogin == true) {
@@ -130,6 +130,7 @@ public class Kelompok12_MesinATM {
                             System.out.println("Jumlah Uang Yang Di Setor : " + tambah);
                             System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                             System.out.println("======================================");
+                            input.nextLine();
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -157,6 +158,7 @@ public class Kelompok12_MesinATM {
                             System.out.println("sisa saldo : " + account[saldo][1]);
                             System.out.println("jumlah uang yang ditarik : " + tarik);
                             System.out.println("======================================");
+                            input.nextLine();
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
