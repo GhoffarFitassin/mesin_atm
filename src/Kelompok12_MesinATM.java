@@ -118,9 +118,9 @@ public class Kelompok12_MesinATM {
                     // case 2 setor tunai
                     case 2 -> {
                         do {
-                            System.out.println("======================================");
-                            System.out.println("|             Setor Tunai            |");
-                            System.out.println("======================================");
+                            System.out.println("==========================================");
+                            System.out.println("|               Setor Tunai              |");
+                            System.out.println("==========================================");
                             System.out.println("Nominal Yang Ingin Anda Setor ");
                             duit = getStringNumber("Isi Nominal : ");
                             account[saldo][1] += duit;
@@ -129,7 +129,7 @@ public class Kelompok12_MesinATM {
                             dateTime();
                             System.out.println("Jumlah Uang Yang Di Setor : " + duit);
                             System.out.println("Saldo Saat Ini : " + account[saldo][1]);
-                            System.out.println("======================================");
+                            System.out.println("==========================================");
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -145,9 +145,9 @@ public class Kelompok12_MesinATM {
                     // case 3 tarik uang tunai
                     case 3 -> {
                         do {
-                            System.out.println("======================================");
-                            System.out.println("|             Tarik Tunai            |");
-                            System.out.println("======================================");
+                            System.out.println("==========================================");
+                            System.out.println("|               Tarik Tunai              |");
+                            System.out.println("==========================================");
                             System.out.println("Nominal Yang Ingin Anda Tarik");
                             duit = getStringNumber("Isi Nominal : ");
                             account[saldo][1] -= duit;
@@ -156,7 +156,7 @@ public class Kelompok12_MesinATM {
                             dateTime();
                             System.out.println("sisa saldo : " + account[saldo][1]);
                             System.out.println("jumlah uang yang ditarik : " + duit);
-                            System.out.println("======================================");
+                            System.out.println("==========================================");
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
