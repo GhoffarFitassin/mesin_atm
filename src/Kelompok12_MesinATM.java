@@ -6,6 +6,7 @@ public class Kelompok12_MesinATM {
     static String[][] arrDate = {};
     static String mutasi = "";
     static int pin, noRek, transfer = 0, countDate = 0, saldo = -1, Rek = 0, masuk = 0, tf = 0, keluar = 0, pilihan, pilihan2, duit = 0;
+    static int pin, countDate = 0, saldo = -1, masuk = 0, keluar = 0, pilihan, pilihan2, duit = 0;
     static String pins;
     static boolean backLogin = true;
     static boolean isMenu = true;
