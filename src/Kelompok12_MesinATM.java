@@ -5,8 +5,8 @@ public class Kelompok12_MesinATM {
     static Date now = new Date();
     static String[][] arrDate = {};
     static String mutasi = "";
-    static int pin, noRek, transfer = 0, countDate = 0, saldo = -1, Rek = 0, masuk = 0, tf = 0, keluar = 0, pilihan, pilihan2, duit = 0;
-    static int pin, countDate = 0, saldo = -1, masuk = 0, keluar = 0, pilihan, pilihan2, duit = 0;
+    static int pin, noRek, transfer = 0, countDate = 0, saldo = -1, Rek = 0, pilihan,
+            pilihan2, duit = 0;
     static String pins;
     static boolean backLogin = true;
     static boolean isMenu = true;
@@ -51,8 +51,6 @@ public class Kelompok12_MesinATM {
                 break;
             }
             saldo = -1;
-            masuk = 0;
-            keluar = 0;
             toLogin = false;
 
             // input login
@@ -81,7 +79,6 @@ public class Kelompok12_MesinATM {
 
     // function menu
     public static void Menu() {
-        int[] tf_saldo = new int[10];
         // menu area
         while (toLogin == true) {
             System.out.println("");
@@ -177,47 +174,45 @@ public class Kelompok12_MesinATM {
                     }
                     case 4 -> {
                         do {
-                           System.out.println("======================================");
-                           System.out.println("|              Transfer              |");
-                           System.out.println("======================================");
-                           System.out.println("============= No. Rekening ===========");
-                           noRek = getStringNumber("Masukkan No. Rek : ");
-                           System.out.println("==================================");
-                           for (int a = 0; a < account.length; a++) {
-                               if (noRek == account[a][2]) {
-                               Rek = a;
-                               toRek = true;                               
-                               break;
-                           }
-                           }
-                           if (toRek == true) {
-                           System.out.println("sisa saldo : " + account[saldo][1]);
-                           System.out.print("isi nominal yang ingin di transfer : ");                            
-                           transfer = input.nextInt();
-                           tf_saldo[tf] = transfer;
-                           tf++;
-                           account[saldo][1] -= transfer;
-                           account[Rek][1] += transfer;
-                           System.out.println("jumlah uang yang ditransfer : " + transfer);
-                           System.out.println("======================================");
+                            System.out.println("======================================");
+                            System.out.println("|              Transfer              |");
+                            System.out.println("======================================");
+                            System.out.println("============= No. Rekening ===========");
+                            noRek = getStringNumber("Masukkan No. Rek : ");
+                            System.out.println("==================================");
+                            for (int a = 0; a < account.length; a++) {
+                                if (noRek == account[a][2]) {
+                                    Rek = a;
+                                    toRek = true;
+                                    break;
+                                }
+                            }
+                            if (toRek == true) {
+                                System.out.println("sisa saldo : " + account[saldo][1]);
+                                System.out.println("Nominal yang ingin di transfer  ");
+                                transfer = getStringNumber("Isi Nominal : ");
+                                mutasi = "Trasnfer";
+                                account[saldo][1] -= transfer;
+                                account[Rek][1] += transfer;
+                                System.out.println("jumlah uang yang ditransfer : " + transfer);
+                                System.out.println("======================================");
                             } else {
-                               System.out.println("No rekening tidak di temukan");
-                            }                                                          
-                           input.nextLine();
-                           pilihan2 = getPickMenu(new String[] {
-                                   "Keluar",
-                                   "Kembali"
-                           });
-                           switch (pilihan2) {
-                               case 1 -> {
-                                   toLogin = false;
-                                   break;
-                               }
-                           }
-                           break;
-                       } while (pilihan2 != 2);
+                                System.out.println("No rekening tidak di temukan");
+                            }
+                            pilihan2 = getPickMenu(new String[] {
+                                    "Keluar",
+                                    "Kembali"
+                            });
+                            switch (pilihan2) {
+                                case 1 -> {
+                                    toLogin = false;
+                                    break;
+                                }
+                            }
+                            break;
+                        } while (pilihan2 != 2);
 
-                   }
+                    }
                     // case 5 histori transaksi
                     case 5 -> {
                         do {
