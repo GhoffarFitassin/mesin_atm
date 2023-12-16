@@ -1,12 +1,24 @@
 import java.util.Scanner;
+import java.util.Date;
 
 public class Kelompok12_MesinATM {
-    static int pin, baris = 5, saldo = -1, masuk = 0, keluar = 0, pilihan, pilihan2;
-    static int tarik = 0, tambah = 0;
+    static Date now = new Date();
+    static String[][] arrDate = {};
+    static String mutasi = "";
+    static int pin, countDate = 0, saldo = -1, masuk = 0, keluar = 0, pilihan, pilihan2, duit = 0;
+    static String pins;
     static boolean backLogin = true;
     static boolean isMenu = true;
     static boolean toLogin = false;
     static Scanner input = new Scanner(System.in);
+
+    // account
+    static int[][] account = {
+            { 123, 100000, 123456 },
+            { 321, 500000, 234567 },
+            { 231, 200000, 345678 }
+    };
+    // accound
 
     public static void main(String[] args) throws Exception {
 
@@ -31,20 +43,6 @@ public class Kelompok12_MesinATM {
     public static void Login() {
 
         int counter = 0;
-        int[][] account = new int[baris][2];
-
-        // akun
-        account[0][0] = 123;
-        account[0][1] = 100000;
-        account[0][2] = 123456;
-
-        account[1][0] = 321;
-        account[1][1] = 500000;
-        account[1][2] = 234567;
-
-        account[2][0] = 231;
-        account[2][1] = 200000;
-        account[2][2] = 345678;
 
         do {
             if (counter == 5) {
@@ -76,13 +74,11 @@ public class Kelompok12_MesinATM {
             counter++;
         } while (toLogin != true);
 
-        Menu(account);
+        Menu();
     }
 
     // function menu
-    public static void Menu(int[][] account) {
-
-        int[] tambah_saldo = new int[10], tarik_saldo = new int[10];
+    public static void Menu() {
         // menu area
         while (toLogin == true) {
             System.out.println("");
@@ -125,15 +121,15 @@ public class Kelompok12_MesinATM {
                             System.out.println("======================================");
                             System.out.println("|             Setor Tunai            |");
                             System.out.println("======================================");
-                            System.out.print("\nNominal Yang Ingin Anda Setor: ");
-                            tambah = input.nextInt();
-                            tambah_saldo[masuk] = tambah;
-                            masuk++;
-                            account[saldo][1] += tambah;
-                            System.out.println("Jumlah Uang Yang Di Setor : " + tambah);
+                            System.out.println("Nominal Yang Ingin Anda Setor ");
+                            duit = getStringNumber("Isi Nominal : ");
+                            account[saldo][1] += duit;
+                            mutasi = "Setor";
+                            countDate++;
+                            dateTime();
+                            System.out.println("Jumlah Uang Yang Di Setor : " + duit);
                             System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                             System.out.println("======================================");
-                            input.nextLine();
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -150,18 +146,17 @@ public class Kelompok12_MesinATM {
                     case 3 -> {
                         do {
                             System.out.println("======================================");
-                            System.out.println("|          tarik uang Tunai          |");
+                            System.out.println("|             Tarik Tunai            |");
                             System.out.println("======================================");
-                            System.out.println("isi uang yang ingin ditarik");
-                            System.out.print("Isi nominal : ");
-                            tarik = input.nextInt();
-                            tarik_saldo[keluar] = tarik;
-                            keluar++;
-                            account[saldo][1] -= tarik;
+                            System.out.println("Nominal Yang Ingin Anda Tarik");
+                            duit = getStringNumber("Isi Nominal : ");
+                            account[saldo][1] -= duit;
+                            mutasi = "Tarik";
+                            countDate++;
+                            dateTime();
                             System.out.println("sisa saldo : " + account[saldo][1]);
-                            System.out.println("jumlah uang yang ditarik : " + tarik);
+                            System.out.println("jumlah uang yang ditarik : " + duit);
                             System.out.println("======================================");
-                            input.nextLine();
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -179,18 +174,20 @@ public class Kelompok12_MesinATM {
                     // case 4 histori transaksi
                     case 4 -> {
                         do {
-                            System.out.println("======================================");
-                            System.out.println("|          Histori transaksi         |");
-                            System.out.println("======================================");
-                            System.out.println("Saldo Masuk");
-                            for (int in = 0; in < masuk; in++) {
-                                System.out.println((in + 1) + " " + tambah_saldo[in]);
+                            pins = Integer.toString(pin);
+                            System.out.println("=================================================================");
+                            System.out.println("|                       Histori transaksi                       |");
+                            System.out.println("=================================================================");
+                            for (int i = 0; i < arrDate.length; i++) {
+                                if (arrDate[i][0].equals(pins)) {
+                                    System.out.print((i + 1) + " ");
+                                    for (int j = 0; j < arrDate[i].length; j++) {
+                                        System.out.print(arrDate[i][j] + "   ");
+                                    }
+                                    System.out.println();
+                                }
                             }
-                            System.out.println("Saldo Keluar");
-                            for (int out = 0; out < keluar; out++) {
-                                System.out.println((out + 1) + " " + tarik_saldo[out]);
-                            }
-                            System.out.println("======================================");
+                            System.out.println("=================================================================");
                             pilihan2 = getPickMenu(new String[] {
                                     "Keluar",
                                     "Kembali"
@@ -272,4 +269,19 @@ public class Kelompok12_MesinATM {
         }
     }
 
+    static void dateTime() {
+        String[][] dateNow = new String[countDate][4];
+        for (int i = 0; i < arrDate.length; i++) {
+            for (int j = 0; j < arrDate[i].length; j++) {
+                dateNow[i][j] = arrDate[i][j];
+            }
+        }
+        arrDate = dateNow;
+
+        arrDate[countDate - 1][0] = Integer.toString(account[saldo][0]);
+        arrDate[countDate - 1][1] = mutasi;
+        arrDate[countDate - 1][2] = Integer.toString(duit);
+        arrDate[countDate - 1][3] = String.valueOf(now);
+
+    }
 }
