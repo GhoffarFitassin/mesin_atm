@@ -22,8 +22,7 @@ public class Kelompok12_MesinATM {
     };
     // accound
 
-    public static void main(String[] args) throws Exception {
-
+    static void open(){
         System.out.println(
                 "========================================================================================");
         System.out.println("\t\r\n" + //
@@ -37,13 +36,15 @@ public class Kelompok12_MesinATM {
                 "");
         System.out.println(
                 "========================================================================================");
+    }
+    public static void main(String[] args) throws Exception {
         Login();
         input.close();
     }
 
     // function login
     public static void Login() {
-
+        open();
         int counter = 0;
 
         do {
@@ -68,8 +69,10 @@ public class Kelompok12_MesinATM {
             }
             if (toLogin == true) {
                 System.out.println("Login Berhasil");
+                System.out.println("===========================");
             } else {
                 System.out.println("PIN salah");
+                System.out.println("===========================");
             }
             counter++;
         } while (toLogin != true);
@@ -79,6 +82,7 @@ public class Kelompok12_MesinATM {
 
     // function menu
     public static void Menu() {
+        open();
         // menu area
         while (toLogin == true) {
             System.out.println("");
