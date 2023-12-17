@@ -22,7 +22,7 @@ public class Kelompok12_MesinATM {
     };
     // accound
 
-    static void open(){
+    static void open() {
         System.out.println(
                 "========================================================================================");
         System.out.println("\t\r\n" + //
@@ -37,6 +37,7 @@ public class Kelompok12_MesinATM {
         System.out.println(
                 "========================================================================================");
     }
+
     public static void main(String[] args) throws Exception {
         Login();
         input.close();
@@ -86,7 +87,7 @@ public class Kelompok12_MesinATM {
         // menu area
         while (toLogin == true) {
             System.out.println("");
-            loop: do {
+            do {
                 System.out.println("************************************");
                 System.out.println("|          Bank Suka Maju          |");
                 System.out.println("************************************");
@@ -115,7 +116,7 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break loop;
+                                    break;
                                 }
                             }
                         } while (pilihan2 != 2);
@@ -142,7 +143,7 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break loop;
+                                    break;
                                 }
                             }
                         } while (pilihan2 != 2);
@@ -241,7 +242,7 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break loop;
+                                    break;
                                 }
                             }
                         } while (pilihan2 != 2);
@@ -266,7 +267,7 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break loop;
+                                    break;
                                 }
                             }
                         } while (pilihan2 != 2);
