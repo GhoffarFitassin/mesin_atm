@@ -69,10 +69,10 @@ public class Kelompok12_MesinATM {
                 }
             }
             if (toLogin == true) {
-                System.out.println("Login Berhasil");
+                System.out.println("|      Login Berhasil     |");
                 System.out.println("===========================");
             } else {
-                System.out.println("PIN salah");
+                System.out.println("|        PIN salah        |");
                 System.out.println("===========================");
             }
             counter++;
