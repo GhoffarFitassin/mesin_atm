@@ -97,7 +97,7 @@ public class Kelompok12_MesinATM {
                         "Transfer",
                         "History Transaksi",
                         "Help",
-                        "keluar"
+                        "Logout"
                 });
                 switch (pilihan) {
                     // case 1 cek saldo
@@ -109,7 +109,7 @@ public class Kelompok12_MesinATM {
                             System.out.println("\n     Saldo Anda Saat Ini : " + account[saldo][1]);
                             System.out.println("=======================================");
                             pilihan2 = getPickMenu(new String[] {
-                                    "Keluar",
+                                    "Logout",
                                     "Kembali"
                             });
                             switch (pilihan2) {
@@ -136,7 +136,7 @@ public class Kelompok12_MesinATM {
                             System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                             System.out.println("==========================================");
                             pilihan2 = getPickMenu(new String[] {
-                                    "Keluar",
+                                    "Logout",
                                     "Kembali"
                             });
                             switch (pilihan2) {
@@ -163,7 +163,7 @@ public class Kelompok12_MesinATM {
                             System.out.println("jumlah uang yang ditarik : " + duit);
                             System.out.println("==========================================");
                             pilihan2 = getPickMenu(new String[] {
-                                    "Keluar",
+                                    "Logout",
                                     "Kembali"
                             });
                             switch (pilihan2) {
@@ -204,7 +204,7 @@ public class Kelompok12_MesinATM {
                                 System.out.println("No rekening tidak di temukan");
                             }
                             pilihan2 = getPickMenu(new String[] {
-                                    "Keluar",
+                                    "Logout",
                                     "Kembali"
                             });
                             switch (pilihan2) {
@@ -235,7 +235,7 @@ public class Kelompok12_MesinATM {
                             }
                             System.out.println("=================================================================");
                             pilihan2 = getPickMenu(new String[] {
-                                    "Keluar",
+                                    "Logout",
                                     "Kembali"
                             });
                             switch (pilihan2) {
@@ -260,7 +260,7 @@ public class Kelompok12_MesinATM {
                                     .println("4. Gunakan Menu ke-4 jika anda ingin melihat history transaksi");
                             System.out.println("6. Gunakan Menu ke-6 jika anda selesai menggunakan mesin ATM");
                             pilihan2 = getPickMenu(new String[] {
-                                    "Keluar",
+                                    "Logout",
                                     "Kembali"
                             });
                             switch (pilihan2) {
