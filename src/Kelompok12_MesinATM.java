@@ -160,8 +160,8 @@ public class Kelompok12_MesinATM {
                             mutasi = "Tarik";
                             countDate++;
                             dateTime();
-                            System.out.println("sisa saldo : " + account[saldo][1]);
                             System.out.println("jumlah uang yang ditarik : " + duit);
+                            System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                             System.out.println("==========================================");
                             pilihan2 = getPickMenu(new String[] {
                                     "Logout",
@@ -193,7 +193,7 @@ public class Kelompok12_MesinATM {
                                 }
                             }
                             if (toRek == true) {
-                                System.out.println("sisa saldo : " + account[saldo][1]);
+                                System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                                 System.out.println("Nominal yang ingin di transfer  ");
                                 transfer = getStringNumber("Isi Nominal : ");
                                 mutasi = "Trasnfer";
