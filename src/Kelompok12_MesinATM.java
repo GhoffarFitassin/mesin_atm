@@ -195,13 +195,13 @@ public class Kelompok12_MesinATM {
                             if (toRek == true) {
                                 System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                                 System.out.println("Nominal yang ingin di transfer  ");
-                                transfer = getStringNumber("Isi Nominal : ");
+                                duit = getStringNumber("Isi Nominal : ");
                                 mutasi = "Transfer";
                                 countDate++;
                                 dateTime();
-                                account[saldo][1] -= transfer;
-                                account[Rek][1] += transfer;
-                                System.out.println("jumlah uang yang ditransfer : " + transfer);
+                                account[saldo][1] -= duit;
+                                account[Rek][1] += duit;
+                                System.out.println("jumlah uang yang ditransfer : " + duit);
                                 System.out.println("======================================");
                             } else {
                                 System.out.println("No rekening tidak di temukan");
