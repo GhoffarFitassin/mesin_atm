@@ -103,7 +103,7 @@ public class Kelompok12_MesinATM {
                 switch (pilihan) {
                     // case 1 cek saldo
                     case 1 -> {
-                        do {
+                        loop : do {
                             System.out.println("=======================================");
                             System.out.println("|               Cek Saldo             |");
                             System.out.println("=======================================");
@@ -116,14 +116,14 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break;
+                                    break loop;
                                 }
                             }
                         } while (pilihan2 != 2);
                     }
                     // case 2 setor tunai
                     case 2 -> {
-                        do {
+                        loop : do {
                             System.out.println("==========================================");
                             System.out.println("|               Setor Tunai              |");
                             System.out.println("==========================================");
@@ -143,14 +143,14 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break;
+                                    break loop;
                                 }
                             }
                         } while (pilihan2 != 2);
                     }
                     // case 3 tarik uang tunai
                     case 3 -> {
-                        do {
+                        loop : do {
                             System.out.println("==========================================");
                             System.out.println("|               Tarik Tunai              |");
                             System.out.println("==========================================");
@@ -170,15 +170,14 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break;
+                                    break loop;
                                 }
                             }
-                            break;
                         } while (pilihan2 != 2);
 
                     }
                     case 4 -> {
-                        do {
+                        loop : do {
                             System.out.println("======================================");
                             System.out.println("|              Transfer              |");
                             System.out.println("======================================");
@@ -189,7 +188,7 @@ public class Kelompok12_MesinATM {
                                 if (noRek == account[a][2]) {
                                     Rek = a;
                                     toRek = true;
-                                    break;
+                                    break loop;
                                 }
                             }
                             if (toRek == true) {
@@ -211,16 +210,15 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break;
+                                    break loop;
                                 }
                             }
-                            break;
                         } while (pilihan2 != 2);
 
                     }
                     // case 5 histori transaksi
                     case 5 -> {
-                        do {
+                        loop : do {
                             pins = Integer.toString(pin);
                             System.out.println("=================================================================");
                             System.out.println("|                       Histori transaksi                       |");
@@ -242,14 +240,14 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break;
+                                    break loop;
                                 }
                             }
                         } while (pilihan2 != 2);
                     }
                     // case 5 fitur help
                     case 6 -> {
-                        do {
+                        loop : do {
                             System.out.println("=================================================");
                             System.out.println("|                     Help                      |");
                             System.out.println("=================================================");
@@ -267,7 +265,7 @@ public class Kelompok12_MesinATM {
                             switch (pilihan2) {
                                 case 1 -> {
                                     toLogin = false;
-                                    break;
+                                    break loop;
                                 }
                             }
                         } while (pilihan2 != 2);
