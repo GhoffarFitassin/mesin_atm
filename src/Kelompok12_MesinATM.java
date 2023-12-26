@@ -103,7 +103,7 @@ public class Kelompok12_MesinATM {
                 switch (pilihan) {
                     // case 1 cek saldo
                     case 1 -> {
-                        loop : do {
+                        loop: do {
                             System.out.println("=======================================");
                             System.out.println("|               Cek Saldo             |");
                             System.out.println("=======================================");
@@ -196,7 +196,9 @@ public class Kelompok12_MesinATM {
                                 System.out.println("Saldo Saat Ini : " + account[saldo][1]);
                                 System.out.println("Nominal yang ingin di transfer  ");
                                 transfer = getStringNumber("Isi Nominal : ");
-                                mutasi = "Trasnfer";
+                                mutasi = "Transfer";
+                                countDate++;
+                                dateTime();
                                 account[saldo][1] -= transfer;
                                 account[Rek][1] += transfer;
                                 System.out.println("jumlah uang yang ditransfer : " + transfer);
